@@ -126,10 +126,12 @@ $radius: 5px;
       text-align: center;
       line-height: 45px;
       float: left;
+      cursor: pointer;
     }
     
     button {
       float: right;
+      cursor: pointer;
     }
     
     &.rtl-nav {
