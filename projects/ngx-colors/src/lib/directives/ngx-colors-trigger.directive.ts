@@ -16,6 +16,7 @@ import { NgxColorsColor } from '../clases/color';
 import { ConverterService } from '../services/converter.service';
 import { formats } from '../helpers/formats';
 import { ColorFormats } from '../enums/formats';
+import { Direction } from '../types/direction';
 
 @Directive({
   selector: '[ngx-colors-trigger]',
@@ -42,6 +43,7 @@ export class NgxColorsTriggerDirective
   //This is used to set a custom palette of colors in the panel;
   @Input() palette: Array<string> | Array<NgxColorsColor>;
 
+  @Input() dir: Direction = 'ltr';
   @Input() format: string;
   @Input() formats: string[];
   @Input() position: 'top' | 'bottom' = 'bottom';
@@ -102,7 +104,8 @@ export class NgxColorsTriggerDirective
         this.cancelLabel,
         this.colorPickerControls,
         this.position,
-        this.formats
+        this.formats,
+        this.dir
       );
     }
     this.open.emit(this.color);

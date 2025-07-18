@@ -31,6 +31,7 @@ export class ColorPickerComponent
   //IO color
   @Input() color: Hsva = new Hsva(0, 1, 1, 1);
   @Input() controls: "default" | "only-alpha" | "no-alpha" = "default";
+  @Input() dir: 'ltr' | 'rtl' = 'ltr';
   @Output() sliderChange: EventEmitter<Hsva> = new EventEmitter<Hsva>(false);
   @Output() onAlphaChange: EventEmitter<any> = new EventEmitter<any>(false);
   //Event triggered when any slider change

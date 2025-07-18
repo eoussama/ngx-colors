@@ -1,4 +1,4 @@
-<div #dialogPopup class="color-picker" (click)="$event.stopPropagation()">
+<div #dialogPopup class="color-picker" [attr.dir]="dir" (click)="$event.stopPropagation()">
   <div
     class="saturation-lightness"
     *ngIf="this.controls != 'only-alpha'"

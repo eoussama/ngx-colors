@@ -1,4 +1,4 @@
-<div class="opened" [style]="positionString" #dialog>
+<div class="opened" [style]="positionString" [attr.dir]="dir" #dialog>
   <ng-container *ngIf="menu == 1">
     <div class="colors" [@colorsAnimation]="colorsAnimationEffect">
       <ng-container *ngFor="let color of palette; let i = index">
@@ -50,6 +50,7 @@
         *ngIf="!hideColorPicker && this.colorPickerControls == 'only-alpha'"
         [controls]="colorPickerControls"
         [color]="hsva"
+        [dir]="dir"
         (colorChange)="onChangeColorPicker($event)"
         (onAlphaChange)="onAlphaChange($event)"
       ></color-picker>
@@ -118,6 +119,7 @@
       <color-picker
         [controls]="colorPickerControls"
         [color]="hsva"
+        [dir]="dir"
         (sliderChange)="onChangeColorPicker($event)"
       ></color-picker>
     </div>

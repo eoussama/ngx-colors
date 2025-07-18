@@ -133,6 +133,7 @@ export class PanelComponent implements OnInit {
   public acceptLabel: string;
   public cancelLabel: string;
   public colorPickerControls: 'default' | 'only-alpha' | 'no-alpha' = 'default';
+  public dir: 'ltr' | 'rtl' = 'ltr';
   private triggerInstance: NgxColorsTriggerDirective;
   private TriggerBBox;
   public isSelectedColorInPalette: boolean;
@@ -197,6 +198,7 @@ export class PanelComponent implements OnInit {
     colorPickerControls: 'default' | 'only-alpha' | 'no-alpha',
     position: 'top' | 'bottom',
     userFormats: string[] = [],
+    dir: 'ltr' | 'rtl' = 'ltr',
   ) {
     this.colorPickerControls = colorPickerControls;
     this.triggerInstance = triggerInstance;
@@ -237,6 +239,7 @@ export class PanelComponent implements OnInit {
     this.previewColor = this.color;
     this.palette = palette ?? defaultColors;
     this.colorsAnimationEffect = animation;
+    this.dir = dir;
     if (position == 'top') {
       let TriggerBBox = this.TriggerBBox.nativeElement.getBoundingClientRect();
       this.positionString =
