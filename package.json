@@ -1,5 +1,5 @@
 {
-  "name": "ngx-colors",
+  "name": "@eoussama/ngx-colors",
   "version": "3.6.0",
   "scripts": {
     "ng": "ng",
