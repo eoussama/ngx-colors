@@ -256,13 +256,13 @@ export class PanelComponent implements OnInit {
       this.top = viewportOffset.top + viewportOffset.height;
 
       if (isDocumentRTL) {
-        if (viewportOffset.right + panelWidth > window.innerWidth) {
+        if (viewportOffset.left + panelWidth > window.innerWidth) {
           this.left = viewportOffset.left < panelWidth
             ? window.innerWidth / 2 + panelWidth / 2
             : viewportOffset.left + panelWidth;
 
         } else {
-          this.left = viewportOffset.right + panelWidth;
+          this.left = viewportOffset.left + panelWidth;
         }
       } else {
         if (viewportOffset.left + panelWidth > window.innerWidth) {
