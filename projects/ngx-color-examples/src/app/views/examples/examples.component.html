@@ -2,32 +2,24 @@
   <h2>More usage examples</h2>
   <!-- EXAMPLE BLOCK -->
   <h3>Custom Trigger</h3>
-  <span class="text"
-    >The ngx-colors-trigger directive can be apply to any element to make a
-    custom trigger</span
-  >
+  <span class="text">The ngx-colors-trigger directive can be apply to any element to make a
+    custom trigger</span>
   <div class="showcase">
     <app-custom-trigger-example></app-custom-trigger-example>
   </div>
-  <app-document-viewer
-    [documents]="examples.customtrigger"
-  ></app-document-viewer>
+  <app-document-viewer [documents]="examples.customtrigger"></app-document-viewer>
   <br />
   <hr />
   <!-- END EXAMPLE BLOCK -->
 
   <!-- EXAMPLE BLOCK -->
   <h3>Hide some parts of the component</h3>
-  <span class="text"
-    >You can hide the text input or the Color Picker if want. try playing with
-    the toggles here.</span
-  >
+  <span class="text">You can hide the text input or the Color Picker if want. try playing with
+    the toggles here.</span>
   <div class="showcase">
     <app-hide-elements-example></app-hide-elements-example>
   </div>
-  <app-document-viewer
-    [documents]="examples.hideelements"
-  ></app-document-viewer>
+  <app-document-viewer [documents]="examples.hideelements"></app-document-viewer>
   <br />
   <hr />
   <!-- END EXAMPLE BLOCK -->
@@ -43,9 +35,7 @@
   <div class="showcase">
     <app-custom-palette-example></app-custom-palette-example>
   </div>
-  <app-document-viewer
-    [documents]="examples.custompalette"
-  ></app-document-viewer>
+  <app-document-viewer [documents]="examples.custompalette"></app-document-viewer>
   <br />
   <hr />
   <!-- END EXAMPLE BLOCK -->
@@ -64,6 +54,22 @@
   <br />
   <hr />
   <!-- END EXAMPLE BLOCK -->
+
+  <!-- EXAMPLE BLOCK -->
+  <h3>Direction Support (LTR/RTL)</h3>
+  <p class="text">
+    The <b>dir</b> input allows you to control the text direction of the color picker.
+    Useful for applications that need to support RTL languages.
+  </p>
+
+  <div class="showcase">
+    <app-direction-example></app-direction-example>
+  </div>
+  <app-document-viewer [documents]="examples.direction"></app-document-viewer>
+  <br />
+  <hr />
+  <!-- END EXAMPLE BLOCK -->
+   
   <!-- EXAMPLE BLOCK -->
   <h3>Using the validator on Reactive Forms</h3>
   <p class="text">

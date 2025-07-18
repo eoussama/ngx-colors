@@ -46,6 +46,11 @@ export var api = {
         description:
           "Set the element(ID) to append the overlay, Default is body",
       },
+      {
+        name: "dir",
+        description:
+          "Set the text direction for the color picker.<br>Options: <ul><li>ltr (left-to-right)</li><li>rtl (right-to-left)</li><ul>",
+      },
     ],
     output: [
       {

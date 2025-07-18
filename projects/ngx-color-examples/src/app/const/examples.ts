@@ -71,4 +71,16 @@ export var examples = {
       file: "/app/examples/validator-example/validator-example.component.html",
     },
   ],
+  direction: [
+    {
+      label: "TS",
+      leng: ["typescript"],
+      file: "/app/examples/direction-example/direction-example.component.ts",
+    },
+    {
+      label: "HTML",
+      leng: ["html"],
+      file: "/app/examples/direction-example/direction-example.component.html",
+    },
+  ],
 };

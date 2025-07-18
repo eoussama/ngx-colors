@@ -1,0 +1,35 @@
+<div class="direction-example">
+  <div class="example-container">
+    <div class="example-section">
+      <h4>Left-to-Right (LTR) Direction</h4>
+      <div class="color-picker-wrapper">
+        <ngx-colors
+          ngx-colors-trigger
+          [(ngModel)]="ltrColor"
+          [dir]="'ltr'"
+          [colorsAnimation]="'slide-in'"
+        ></ngx-colors>
+        <div class="color-display">
+          <span class="label">Selected Color:</span>
+          <span class="color-value">{{ ltrColor }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="example-section">
+      <h4>Right-to-Left (RTL) Direction</h4>
+      <div class="color-picker-wrapper">
+        <ngx-colors
+          ngx-colors-trigger
+          [(ngModel)]="rtlColor"
+          [dir]="'rtl'"
+          [colorsAnimation]="'popup'"
+        ></ngx-colors>
+        <div class="color-display">
+          <span class="label">Selected Color:</span>
+          <span class="color-value">{{ rtlColor }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,6 +25,7 @@ import { OverviewComponent } from "./views/overview/overview.component";
 import { ApiComponent } from "./views/api/api.component";
 import { ExamplesComponent } from "./views/examples/examples.component";
 import { ChangelogComponent } from "./views/changelog/changelog.component";
+import { DirectionExampleComponent } from './examples/direction-example/direction-example.component';
 export function getHighlightLanguages() {
   return {
     typescript: () => import("highlight.js/lib/languages/typescript"),
@@ -49,6 +50,7 @@ export function getHighlightLanguages() {
     ApiComponent,
     ExamplesComponent,
     ChangelogComponent,
+    DirectionExampleComponent,
   ],
   imports: [
     HighlightModule,
