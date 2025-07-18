@@ -29,6 +29,7 @@
     "@angular/platform-browser": "^15.1.2",
     "@angular/platform-browser-dynamic": "^15.1.2",
     "@angular/router": "^15.1.2",
+    "highlight.js": "^11.11.1",
     "ngx-highlightjs": "^4.1.1",
     "npm": "^8.11.0",
     "rxjs": "^7.5.5",
@@ -57,5 +58,6 @@
     "ts-node": "~8.7.0",
     "tslint": "^6.1.2",
     "typescript": "^4.9.4"
-  }
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }
