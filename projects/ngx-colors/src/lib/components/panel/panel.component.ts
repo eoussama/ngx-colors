@@ -103,7 +103,7 @@ export class PanelComponent implements OnInit {
   constructor(
     public service: ConverterService,
     private cdr: ChangeDetectorRef
-  ) {}
+  ) { }
 
   public color = '#000000';
   public previewColor: string = '#000000';
@@ -209,9 +209,9 @@ export class PanelComponent implements OnInit {
     this.acceptLabel = acceptLabel;
     this.cancelLabel = cancelLabel;
 
-    if(userFormats.length) {
+    if (userFormats.length) {
       const allFormatsValid = userFormats.every(frt => formats.includes(frt));
-      if( allFormatsValid ) {
+      if (allFormatsValid) {
         this.colorFormats = userFormats;
       }
     }
@@ -231,7 +231,7 @@ export class PanelComponent implements OnInit {
       }
     } else {
       this.format = this.colorFormats.indexOf(this.service.getFormatByString(this.color));
-      if( this.format < 0 ) {
+      if (this.format < 0) {
         this.format = 0;
       }
     }
@@ -250,16 +250,29 @@ export class PanelComponent implements OnInit {
   public setPosition(): void {
     if (this.TriggerBBox) {
       const panelWidth = 250;
-      const viewportOffset =
-        this.TriggerBBox.nativeElement.getBoundingClientRect();
+      const isDocumentRTL = document.dir === 'rtl';
+      const viewportOffset = this.TriggerBBox.nativeElement.getBoundingClientRect();
+
       this.top = viewportOffset.top + viewportOffset.height;
-      if (viewportOffset.left + panelWidth > window.innerWidth) {
-        this.left =
-          viewportOffset.right < panelWidth
+
+      if (isDocumentRTL) {
+        if (viewportOffset.right + panelWidth > window.innerWidth) {
+          this.left = viewportOffset.left < panelWidth
+            ? window.innerWidth / 2 + panelWidth / 2
+            : viewportOffset.left + panelWidth;
+
+        } else {
+          this.left = viewportOffset.right + panelWidth;
+        }
+      } else {
+        if (viewportOffset.left + panelWidth > window.innerWidth) {
+          this.left = viewportOffset.right < panelWidth
             ? window.innerWidth / 2 - panelWidth / 2
             : viewportOffset.right - panelWidth;
-      } else {
-        this.left = viewportOffset.left;
+
+        } else {
+          this.left = viewportOffset.left;
+        }
       }
     }
   }
@@ -275,8 +288,8 @@ export class PanelComponent implements OnInit {
         triggerBBox.top < panelBBox.height
           ? 'transform: translateY(-' + triggerBBox.bottom + 'px );'
           : 'transform: translateY(calc( -100% - ' +
-            triggerBBox.height +
-            'px ));';
+          triggerBBox.height +
+          'px ));';
     } else {
       this.positionString = '';
     }
@@ -374,10 +387,10 @@ export class PanelComponent implements OnInit {
 
     let formatName = this.colorFormats[this.format];
     let index = colorIndex
-    if( index < 0){
+    if (index < 0) {
       index = this.formatMap[formatName];
     }
-    
+
     this.color = this.service.toFormat(value, index);
     this.setPreviewColor(value);
     this.triggerInstance.setColor(this.color, this.previewColor);
