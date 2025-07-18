@@ -65,6 +65,7 @@
             width="24"
             height="24"
             viewBox="0 0 24 24"
+            [class.rtl-icon]="dir === 'rtl'"
           >
             <path d="M0 0h24v24H0z" fill="none" />
             <path
@@ -89,17 +90,18 @@
     </div>
   </ng-container>
   <ng-container *ngIf="menu == 3">
-    <div class="nav-wrapper">
+    <div class="nav-wrapper" [class.rtl-nav]="dir === 'rtl'">
       <div
         (click)="onClickBack()"
         class="round-button button"
-        style="float: left"
+        [class.rtl-button]="dir === 'rtl'"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
           viewBox="0 0 24 24"
+          [class.rtl-icon]="dir === 'rtl'"
         >
           <path d="M0 0h24v24H0z" fill="none" />
           <path
@@ -107,10 +109,10 @@
           />
         </svg>
       </div>
-      <button (click)="emitClose('cancel')" style="float: right">
+      <button (click)="emitClose('cancel')" [class.rtl-button]="dir === 'rtl'">
         {{ cancelLabel }}
       </button>
-      <button (click)="emitClose('accept')" style="float: right">
+      <button (click)="emitClose('accept')" [class.rtl-button]="dir === 'rtl'">
         {{ acceptLabel }}
       </button>
     </div>
