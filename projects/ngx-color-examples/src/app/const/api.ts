@@ -46,11 +46,6 @@ export var api = {
         description:
           "Set the element(ID) to append the overlay, Default is body",
       },
-      {
-        name: "attachTo",
-        description:
-          "Set the element(ID) to append the overlay, Default is body",
-      },
     ],
     output: [
       {
