@@ -14,12 +14,13 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "ngx-colors": ["dist/ngx-colors"],
-      "ngx-colors/*": ["dist/ngx-colors/*"]
+      "@eoussama/ngx-colors": ["dist/ngx-colors"],
+      "@eoussama/ngx-colors/*": ["dist/ngx-colors/*"]
     },
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
+    "compilationMode": "partial",
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
     //PARTIAL COMPILATION FOR NPM

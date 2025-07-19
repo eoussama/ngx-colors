@@ -17,7 +17,7 @@
     "BPP": "npm run package && npm run publishLib #BUILD PACKAGE n PUBLISH",
     "BFD": "ng build --configuration production ngx-color-examples && cd dist/ngx-color-examples && firebase deploy #BUILD n FIREBASE DEPLOY"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^15.1.2",
     "@angular/cdk": "^15.1.2",
