@@ -1,16 +1,20 @@
-@import "../../shared/variables.scss";
+@use "../../shared/variables.scss" as *;
+
 :host {
   position: fixed;
   z-index: 2001;
 }
+
 .hidden {
   display: none;
 }
+
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 $radius: 5px;
 
 .top {
@@ -38,6 +42,7 @@ $radius: 5px;
     border-radius: 3px;
     line-height: 20px;
   }
+
   button:hover,
   .button:hover {
     background-color: rgba(0, 0, 0, 0.05);
@@ -49,6 +54,7 @@ $radius: 5px;
       cubic-bezier(0.35, 0, 0.25, 1);
     transition-delay: 0s, 0s;
   }
+
   button:focus {
     outline: none;
   }
@@ -58,6 +64,7 @@ $radius: 5px;
     flex-wrap: wrap;
     align-items: center;
     margin: 15px;
+
     .circle {
       $size: 34px;
       height: $size;
@@ -65,11 +72,13 @@ $radius: 5px;
       box-sizing: border-box;
       border-radius: 100%;
       cursor: pointer;
+
       .add {
         font-size: 20px;
         line-height: 45px;
         text-align: center;
       }
+
       .selected {
         border: 2px solid white;
         border-radius: 100%;
@@ -78,15 +87,14 @@ $radius: 5px;
         box-sizing: border-box;
         margin: 2px;
       }
+
       &.colornull {
-        background: linear-gradient(
-          135deg,
-          rgba(236, 236, 236, 0.7) 0%,
-          rgba(236, 236, 236, 0.7) 45%,
-          #de0f00 50%,
-          rgba(236, 236, 236, 0.7) 55%,
-          rgba(236, 236, 236, 0.7) 100%
-        );
+        background: linear-gradient(135deg,
+            rgba(236, 236, 236, 0.7) 0%,
+            rgba(236, 236, 236, 0.7) 45%,
+            #de0f00 50%,
+            rgba(236, 236, 236, 0.7) 55%,
+            rgba(236, 236, 236, 0.7) 100%);
       }
     }
 
@@ -95,9 +103,11 @@ $radius: 5px;
       margin-bottom: 5px;
       flex: 34px 0 0;
     }
+
     .circle.button {
       margin: 0 5px 5px;
     }
+
     .circle.wrapper.color {
       background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
         linear-gradient(-45deg, #ccc 25%, transparent 25%),
@@ -106,6 +116,7 @@ $radius: 5px;
       background-size: 16px 16px;
       background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
     }
+
     .circle-border {
       border: 1px solid rgba(0, 0, 0, 0.03);
     }
@@ -114,9 +125,11 @@ $radius: 5px;
   .color-picker-wrapper {
     margin: 5px 15px 5px 15px;
   }
+
   .nav-wrapper {
     overflow: hidden;
     margin: 5px 5px 5px 5px;
+
     .round-button {
       padding: 5px 0;
       width: 40px;
@@ -128,26 +141,27 @@ $radius: 5px;
       float: left;
       cursor: pointer;
     }
-    
+
     button {
       float: right;
       cursor: pointer;
     }
-    
+
     &.rtl-nav {
       .round-button {
         float: right;
       }
-      
+
       button {
         float: left;
       }
     }
   }
+
   .rtl-icon {
     transform: scaleX(-1);
   }
-  
+
   .manual-input-wrapper {
     $height: 45px;
     display: flex;
@@ -188,4 +202,5 @@ $radius: 5px;
     }
   }
 }
+
 // }
